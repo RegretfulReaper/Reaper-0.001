@@ -1,0 +1,25 @@
+import { std } from "wow/wotlk";
+import { REAPER_CONSTANTS, REAPER_BIT_FLAGS, REAPER_CLASS, REAPER_QUEST_GROUP } from "../classes/reaper";
+
+const SHARED_VALUES = {
+    NAME: "Bloodbath",
+    DESCRIPTION: "Enter a stage in which the anguish and anger from before your conversion cause your damage to increase drastically.",
+    ICON: "Spell_deathknight_bloodboil",
+    AURA_ICON: "Spell_shadow_coneofsilence",
+    AURA_DESCRIPTION: "Increases Attack Power by $s1",
+}
+
+const BLOODBATH_TEMPLATE = std.Spells.create(REAPER_CONSTANTS.MODULE_NAME, "spell-" + SHARED_VALUES + "-rank1")
+
+BLOODBATH_TEMPLATE
+    .Name.enGB.set(SHARED_VALUES.NAME)
+    .Description.enGB.set(SHARED_VALUES.DESCRIPTION)
+    .AuraDescription.enGB.set(SHARED_VALUES.AURA_DESCRIPTION)
+    .Icon.setPath(SHARED_VALUES.ICON)
+    .ActiveIcon.setPath(SHARED_VALUES.AURA_ICON)
+    .Duration.set(30)
+    .Visual.getRef().cloneFromSpell(2764)
+
+BLOODBATH_TEMPLATE
+    .Attributes.CANT_TRIGGER_PROC.set(1)
+    .Attributes.SEPARATE_STACK_PER_CASTER.set(1)

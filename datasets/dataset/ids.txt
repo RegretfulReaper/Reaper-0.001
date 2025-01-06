@@ -1,0 +1,97 @@
+Achievement|default:achievement-Reaper Level 60|4900|4900|
+Achievement_Criteria|default:Feat of Strength Reaper|13500|13500|
+AreaTable|default:dungeon-area|4988|4988|
+AreaTableExplore|default:dungeon-area-bit|3618|3618|
+AreaTrigger|tswow-tests:dungeon-tp-in|6000|6000|
+AreaTrigger|tswow-tests:dungeon-tp-out|6001|6001|
+CharTitlesMask|default:True-Reaper|143|143|
+CharTitlesMask|default:fresh-reaper|144|144|
+ChrClasses|default:Mystic|13|13|
+ChrClasses|default:Reaper|12|12|
+Faction|default:faction-The Undying|1161|1161|
+ItemDisplayInfo|default:Crypt Key|70001|70001|
+ItemDisplayInfo|default:displaySoul Steel|70000|70000|
+ReputationIndex|default:faction-The Undying-rep|105|105|
+SkillLine|default:skill-line-Glyphs|793|793|
+SkillLine|default:skill-line-Runes|792|792|
+SkillLine|default:skill-line-Wisdom|794|794|
+SkillLine|default:skill-lineDeath|789|789|
+SkillLine|default:skill-lineDecay|790|790|
+SkillLine|default:skill-lineUndying|791|791|
+Spell|default:rank(1)-80902|80903|80903|
+Spell|default:rank(10)-80902|80912|80912|
+Spell|default:rank(11)-80902|80913|80913|
+Spell|default:rank(12)-80902|80914|80914|
+Spell|default:rank(13)-80902|80915|80915|
+Spell|default:rank(14)-80902|80916|80916|
+Spell|default:rank(15)-80902|80917|80917|
+Spell|default:rank(2)-80902|80904|80904|
+Spell|default:rank(3)-80902|80905|80905|
+Spell|default:rank(4)-80902|80906|80906|
+Spell|default:rank(5)-80902|80907|80907|
+Spell|default:rank(6)-80902|80908|80908|
+Spell|default:rank(7)-80902|80909|80909|
+Spell|default:rank(8)-80902|80910|80910|
+Spell|default:rank(9)-80902|80911|80911|
+Spell|default:spell-Reap|80902|80902|
+Spell|default:spell-Reaper-orc-racial|80921|80921|
+Spell|default:spell-Reaper-troll-racial|80900|80900|
+Spell|default:spell-Steal Soul-rank1|80901|80901|
+Spell|default:spell-Undying-rank0|80918|80918|
+Spell|default:spell-Veil of Undeath|80919|80919|
+Spell|default:spell-mystic-draenei-racial|80920|80920|
+TalentTab|default:talent-tree-Death|415|415|
+TalentTab|default:talent-tree-Decay|416|416|
+TalentTab|default:talent-tree-Glyphs|419|419|
+TalentTab|default:talent-tree-Runes|418|418|
+TalentTab|default:talent-tree-Undying|417|417|
+TalentTab|default:talent-tree-Wisdom|420|420|
+creature|default:Devouring-Spirit-0|220003|220003|
+creature|default:Devouring-Spirit-1|220004|220004|
+creature|default:Devouring-Spirit-10|220013|220013|
+creature|default:Devouring-Spirit-11|220014|220014|
+creature|default:Devouring-Spirit-12|220015|220015|
+creature|default:Devouring-Spirit-13|220016|220016|
+creature|default:Devouring-Spirit-14|220017|220017|
+creature|default:Devouring-Spirit-15|220018|220018|
+creature|default:Devouring-Spirit-16|220019|220019|
+creature|default:Devouring-Spirit-2|220005|220005|
+creature|default:Devouring-Spirit-3|220006|220006|
+creature|default:Devouring-Spirit-4|220007|220007|
+creature|default:Devouring-Spirit-5|220008|220008|
+creature|default:Devouring-Spirit-6|220009|220009|
+creature|default:Devouring-Spirit-7|220010|220010|
+creature|default:Devouring-Spirit-8|220011|220011|
+creature|default:Devouring-Spirit-9|220012|220012|
+creature|default:Lucious Falconcrest Boss-0|220000|220000|
+creature|default:Lucious Unknown-0|220020|220020|
+creature|default:spawn-reaper-goldshire-trainer-0|220001|220001|
+creature|default:spawn-reaper-northshire-trainer-0|220002|220002|
+creature_template|default:Devouring-Spirit|45009|45009|
+creature_template|default:Lucious Falconcrest Boss|45002|45002|
+creature_template|default:Lucious Unknown|45010|45010|
+creature_template|default:creature-goldshire-trainer|45003|45003|
+creature_template|default:creature-northshire-trainer|45004|45004|
+creature_template|default:general-highlevel-trainer|45001|45001|
+creature_template|default:general-lowlevel-trainer|45000|45000|
+creature_template|default:mystic-highlevel-trainer|45008|45008|
+creature_template|default:mystic-lowlevel-trainer|45007|45007|
+creature_template|default:reaper-highlevel-trainer|45006|45006|
+creature_template|default:reaper-lowlevel-trainer|45005|45005|
+gameobject|default:PLAYER_CRYPT_GATE-0|200000|200000|
+gameobject_template|default:PLAYER_CRYPT_GATE|250000|250000|
+item_template|default:Blades of Fate|60004|60004|
+item_template|default:Blood Crusted Boots|60002|60002|
+item_template|default:Blood Crusted Chestpiece|60000|60000|
+item_template|default:Blood Crusted Leggings|60001|60001|
+item_template|default:Infinity Scythe|60006|60006|
+item_template|default:Initiate Scythe|60003|60003|
+item_template|default:Scribe Leggings|60011|60011|
+item_template|default:Scribe Robe|60009|60009|
+item_template|default:Scribe Wandering Slippers|60010|60010|
+item_template|default:Scribe's Enchanted Pen|60008|60008|
+item_template|default:Scribe's Mace|60007|60007|
+item_template|default:Soul Fragment|60013|60013|
+item_template|default:item-Soul Steel|60005|60005|
+item_template|default:reaper-key-Crypt Key|60012|60012|
+quest_template|default:spare-the-dying|26100|26100|
