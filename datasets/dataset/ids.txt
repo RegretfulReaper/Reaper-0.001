@@ -10,6 +10,7 @@ ChrClasses|default:Mystic|13|13|
 ChrClasses|default:Reaper|12|12|
 Faction|default:faction-The Undying|1161|1161|
 ItemDisplayInfo|default:Crypt Key|70001|70001|
+ItemDisplayInfo|default:artifactdeadwind-scythe|70002|70002|
 ItemDisplayInfo|default:displaySoul Steel|70000|70000|
 ReputationIndex|default:faction-The Undying-rep|105|105|
 SkillLine|default:skill-line-Glyphs|793|793|
@@ -18,6 +19,11 @@ SkillLine|default:skill-line-Wisdom|794|794|
 SkillLine|default:skill-lineDeath|789|789|
 SkillLine|default:skill-lineDecay|790|790|
 SkillLine|default:skill-lineUndying|791|791|
+Spell|default:boss-blizzard|80924|80924|
+Spell|default:boss-evocation|80926|80926|
+Spell|default:boss-frostbolt|80923|80923|
+Spell|default:boss-frostlance|80925|80925|
+Spell|default:boss-immunity|80927|80927|
 Spell|default:rank(1)-80902|80903|80903|
 Spell|default:rank(10)-80902|80912|80912|
 Spell|default:rank(11)-80902|80913|80913|
@@ -39,7 +45,17 @@ Spell|default:spell-Reaper-troll-racial|80900|80900|
 Spell|default:spell-Steal Soul-rank1|80901|80901|
 Spell|default:spell-Undying-rank0|80918|80918|
 Spell|default:spell-Veil of Undeath|80919|80919|
+Spell|default:spell-Veil of Undying-rank0|80922|80922|
 Spell|default:spell-mystic-draenei-racial|80920|80920|
+Spell|default:spell.Spirit-Killer|80936|80936|
+Spell|default:spell.maldrion.increase-armor|80934|80934|
+Spell|default:spell.maldrion.increase-health|80935|80935|
+Spell|default:spell.maldrion.increase-physical-damage|80931|80931|
+Spell|default:spell.maldrion.increase-resistances|80933|80933|
+Spell|default:spell.maldrion.increase-spell-damage|80929|80929|
+Spell|default:spell.maldrion.reduce-physical-damage-taken|80930|80930|
+Spell|default:spell.maldrion.reduce-spell-damage-taken|80928|80928|
+Spell|default:spell.maldrion.reflect-damage|80932|80932|
 TalentTab|default:talent-tree-Death|415|415|
 TalentTab|default:talent-tree-Decay|416|416|
 TalentTab|default:talent-tree-Glyphs|419|419|
@@ -67,17 +83,22 @@ creature|default:Lucious Falconcrest Boss-0|220000|220000|
 creature|default:Lucious Unknown-0|220020|220020|
 creature|default:spawn-reaper-goldshire-trainer-0|220001|220001|
 creature|default:spawn-reaper-northshire-trainer-0|220002|220002|
+creature|default:spirit-binder-0|220021|220021|
 creature_template|default:Devouring-Spirit|45009|45009|
 creature_template|default:Lucious Falconcrest Boss|45002|45002|
 creature_template|default:Lucious Unknown|45010|45010|
+creature_template|default:Spirit-Killer|45014|45014|
 creature_template|default:creature-goldshire-trainer|45003|45003|
 creature_template|default:creature-northshire-trainer|45004|45004|
+creature_template|default:defeated-spirit|45013|45013|
+creature_template|default:enraged-spirit|45012|45012|
 creature_template|default:general-highlevel-trainer|45001|45001|
 creature_template|default:general-lowlevel-trainer|45000|45000|
 creature_template|default:mystic-highlevel-trainer|45008|45008|
 creature_template|default:mystic-lowlevel-trainer|45007|45007|
 creature_template|default:reaper-highlevel-trainer|45006|45006|
 creature_template|default:reaper-lowlevel-trainer|45005|45005|
+creature_template|default:spirit-binder|45011|45011|
 gameobject|default:PLAYER_CRYPT_GATE-0|200000|200000|
 gameobject_template|default:PLAYER_CRYPT_GATE|250000|250000|
 item_template|default:Blades of Fate|60004|60004|

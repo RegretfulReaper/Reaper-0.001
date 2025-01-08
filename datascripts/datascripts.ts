@@ -11,5 +11,6 @@ std.Titles.create("default", "True-Reaper")
 std.Titles.create("default", "fresh-reaper")
     .Text.set({enGB: "Initiate %s, the awoken Soul"})
 
+    console.log(std.Spells.load(47450).codify)
 
 export const QUEST_LOOT_REAPER = std.Loot.Creature.create().addItem(60013, 33, 1, 1, true)

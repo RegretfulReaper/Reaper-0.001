@@ -4,10 +4,10 @@ import { createNewRank, damageCurveByLevel, addToTrainer } from "../utility";
 import { TUNING_VALUES } from "../tuning";
 
 const SHARED_VALUES = {
-    NAME: "Reap",
-    DESCRIPTION: "Slashes an Enemy, dealing $s1 Physical Damage.",
-    ICON: "inv_throwingknife_06",
-    COUNT: "1",
+    NAME: 'Reap',
+    DESCRIPTION: 'Slashes an Enemy, dealing $s1 Damage.',
+    ICON: 'inv_staff_78',
+    COUNT: '1',
 
     A_SPELL_TAGS: [REAPER_BIT_FLAGS.A_REAP],
     B_SPELL_TAGS: [REAPER_BIT_FLAGS.B_DEATH],
@@ -17,7 +17,7 @@ const SHARED_VALUES = {
 const LEVELS = [1, 4, 10, 16, 22, 28, 34, 40, 46, 52, 58, 64, 70, 76, 80]
 const CAST_TIMES = [0]
 
-const REAP_TEMPLATE = std.Spells.create(REAPER_CONSTANTS.MODULE_NAME, "spell-" + SHARED_VALUES.NAME, 0)
+export const REAP_TEMPLATE = std.Spells.create(REAPER_CONSTANTS.MODULE_NAME, "spell-" + SHARED_VALUES.NAME, 0)
 
 REAP_TEMPLATE
     .Attributes.CANT_TARGET_SELF.set(0)
@@ -28,8 +28,6 @@ REAP_TEMPLATE
     .TargetType.UNIT_ENEMY.set(0)
     .CastTime.set(0)
     .Cooldown.Time.set(1000)
-    .Mana.CostPerLevel.set(25)
-    
 
 REAP_TEMPLATE
     .Family.set(REAPER_CONSTANTS.FAMILY_ID)
@@ -39,17 +37,21 @@ REAP_TEMPLATE
     .Effects.addGet()
         .Type.SCHOOL_DAMAGE.set()
         .ImplicitTargetA.UNIT_TARGET_ENEMY.set()
-        .DamageBase.set(27)
-        .DamageDieSides.set(1)
+        .DamageBase.set(29)
+        .DamageDieSides.set(30)
         .ChainAmplitude.set(1)
-        .DamagePerLevel.set(39)
 
+REAP_TEMPLATE
+    .Power.Type.MANA.set()
+    .Power.CostBase.set(11)
         
 REAP_TEMPLATE
     .Visual.getRefCopy()
         .cloneFromSpell(1715)
 
 REAP_TEMPLATE.SkillLines.add(DEATH_SKILL_LINE.ID, [REAPER_CLASS.Mask])
+
+//console.log(std.Spells.load(80903).objectify())
 
 let previousRank : number | undefined
 LEVELS.forEach((level, index) => {
@@ -74,24 +76,24 @@ LEVELS.forEach((level, index) => {
         TUNING_VALUES.OVERALL_DAMAGE *
         TUNING_VALUES.DEATH_DAMAGE *
         TUNING_VALUES.REAP_DAMAGE *
-        damageCurveByLevel(level) *
-        cast_time / 100
+        damageCurveByLevel(level) 
+    //    cast_time / 0
 
     let energy_cost =
         TUNING_VALUES.OVERALL_BASE_ENERGY_PER_SEC *
-        TUNING_VALUES.DEATH_ENERGY_TUNING
-        TUNING_VALUES.REAP_ENERGY
-        cast_time / 100
+        TUNING_VALUES.DEATH_ENERGY_TUNING *
+        TUNING_VALUES.REAP_ENERGY 
+    //    cast_time / 0
 
-    let ap_bonus =
-        cast_time / 120
+    //let ap_bonus =
+    //    cast_time / 0
 
     let rank = index + 1
 
     const NEW_RANK = createNewRank(REAP_TEMPLATE.ID, rank, level, next_level, previousRank)
     NEW_RANK.SkillLines.add(DEATH_SKILL_LINE.ID, [REAPER_CLASS.Mask])
     NEW_RANK.CastTime.setSimple(cast_time)
-    NEW_RANK.BonusData.DirectBonus.set(ap_bonus)
+//    NEW_RANK.BonusData.DirectBonus.set(ap_bonus)
     NEW_RANK.Power.CostPercent.set(energy_cost)
     NEW_RANK.Effects.get(0)
         .PointsBase.set(damage * 3.0)

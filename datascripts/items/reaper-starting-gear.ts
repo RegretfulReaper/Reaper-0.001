@@ -36,7 +36,7 @@ const LEGGINGS = std.Items.create(REAPER_CONSTANTS.MODULE_NAME, SHARED_VALUES.LE
 
 const BOOTS = std.Items.create(REAPER_CONSTANTS.MODULE_NAME, SHARED_VALUES.BOOTS_NAME)
     .Name.enGB.set(SHARED_VALUES.BOOTS_NAME)
-    .Description.enGB.set("A name is inscribed on the side of the sole... $N")
+    .Description.enGB.set("A name is inscribed on the side of the sole... Is it yours?")
     .Class.LEATHER_EQUIP.set()
     .ClassMask.set(REAPER_CLASS.Mask)
     .Armor.set(53)
@@ -54,6 +54,7 @@ const POLEARM = std.Items.create(REAPER_CONSTANTS.MODULE_NAME, SHARED_VALUES.POL
     .Bonding.NO_BOUNDS.set()
     .Quality.WHITE.set()
     .ClassMask.set(REAPER_CLASS.Mask)
+//    .DisplayInfo.set(70002)
     .DisplayInfo.set(39287)
     .Damage.add("PHYSICAL", 3, 9)
     .Damage.addShadow(1, 3)

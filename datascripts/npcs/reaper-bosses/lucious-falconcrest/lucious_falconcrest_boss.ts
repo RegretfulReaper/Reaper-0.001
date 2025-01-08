@@ -22,7 +22,7 @@ const LUCIOUS_MODEL = std.CreatureOutfits.create().fromString(`
     0
     `)
 
-const LUCIOUS_BOSS = std.CreatureTemplates.create("default", "Lucious Falconcrest Boss")
+export const LUCIOUS_BOSS = std.CreatureTemplates.create("default", "Lucious Falconcrest Boss")
     .Name.enGB.set("Lucious Falconcrest")
     .Subname.enGB.set("The Liveless Husk of Master Lucious")
     .Models.addGet().set(LUCIOUS_MODEL.ID)

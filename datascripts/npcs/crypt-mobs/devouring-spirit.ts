@@ -4,7 +4,7 @@ import { CreatureModel } from "wow/wotlk/std/Creature/CreatureDisplayInfo";
 import { QUEST_LOOT_REAPER } from "../../datascripts";
 
 export const DEVOURING_SPIRIT = std.CreatureTemplates.create(REAPER_CONSTANTS.MODULE_NAME, "Devouring-Spirit")
-    .Name.enGB.set("Devouring Spirit")
+    .Name.enGB.set("Lesser Devouring Spirit")
     .Subname.enGB.set("Failed Incarnate")
     .Level.set(1, 3)
     .Type.UNDEAD.set()
@@ -20,6 +20,11 @@ export const DEVOURING_SPIRIT = std.CreatureTemplates.create(REAPER_CONSTANTS.MO
     .MechanicImmunity.SAPPED.set(1)
     .NormalLoot.set(QUEST_LOOT_REAPER.ID)
     .FactionTemplate.NEUTRAL_NON_AGGRESSIVE.set()
+    .Stats.ArmorMod.set(10)
+    .Stats.HealthMod.set(5)
+    .Stats.ExperienceMod.set(3)
+    .Stats.DamageMod.set(1.8)
+
 
 const SPAWNS = [
     {map:0,x:-11200.396484,y:-1778.409668,z:-29.900120,o:2.381124},

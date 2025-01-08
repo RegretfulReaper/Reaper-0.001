@@ -3,10 +3,10 @@ import { REAPER_BIT_FLAGS, REAPER_CLASS, REAPER_CONSTANTS, UNDYING_SKILL_LINE } 
 import { createNewRank, damageCurveByLevel, addToTrainer } from "../utility";
 import { TUNING_VALUES } from "../tuning";
 
-//console.log(std.Spells.load(1120).objectify())
+//console.log(std.Spells.load(643).objectify())
 
 const SHARED_VALUES = {
-    NAME: "Undying",
+    NAME: "Veil of Undying",
     DESCRIPTION: "The Aura of Death envelopes you, and your party, reducing damage taken.",
     AURA_DESCRIPTION: "Increases Armor by $s1",
     ICON: "Inv_misc_tournaments_symbol_scourge",
@@ -78,19 +78,31 @@ UNDYING_TEMPLATE
 
 UNDYING_TEMPLATE
     .Effects.addGet()
-        .Type.APPLY_AREA_AURA_PARTY.set()
+        .Type.APPLY_AURA.set()
         .Aura.MOD_TARGET_ARMOR_PCT.set()
-        .PercentBase.set(24)
+        .PercentBase.set(24 * 3.2)
         .PercentDieSides.set(1)
-        .PercentPerLevel.set(14 * 150)
+        .PercentPerLevel.set(100)
         .ChainAmplitude.set(1)
         .ImplicitTargetA.UNIT_CASTER.set()
 
-    UNDYING_TEMPLATE
+UNDYING_TEMPLATE
     .Effects.addGet()
-        .Type.APPLY_AREA_AURA_PARTY.set()
+        .Type.APPLY_AURA.set()
         .Aura.MOD_SHAPESHIFT.set()
         .Form.set(30)
+        .ImplicitTargetA.UNIT_CASTER.set()
+        .ChainAmplitude.set(1)
+
+UNDYING_TEMPLATE
+    .Effects.addGet()
+        .Type.APPLY_AREA_AURA_RAID.set()
+        .Aura.MOD_RESISTANCE.set()
+        .Resistance.PHYSICAL.set(1)
+        .PointsBase.set(24 * 3.2)
+        .PointsDieSides.set(1)
+        .PointsPerLevel.set(100 * 3.2)
+        .Radius.set(23)
         .ImplicitTargetA.UNIT_CASTER.set()
         .ChainAmplitude.set(1)
 
