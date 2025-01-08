@@ -1,5 +1,6 @@
 import { std } from "wow/wotlk";
 import { CONFIG } from "./config";
+import { DamageBase, PointsBase } from "wow/wotlk/std/Spell/EffectTemplates/PointsBase";
 
 //console.log(std.Spells.load(10).objectify())
 
@@ -31,7 +32,7 @@ const evocation = std.Spells.create("default", "boss-evocation", 12051)
 const immunity = std.Spells.create("default", "boss-immunity", 52982)
     .Power.CostPercent.set(0)
     .Power.CostBase.set(0)
-    .Duration.setSimple(30)
+    .Duration.setSimple(30000)
     .Visual.modRefCopy(x=>x
         .ImpactKit.modRefCopy(x=>x.clear())
     )
@@ -127,7 +128,7 @@ const drain_ghost = std.Spells
     .InterruptFlags.clearAll()
     .AuraInterruptFlags.clearAll()
     .ChannelInterruptFlags.clearAll()
-    .Tags.addUnique("default", "spell.Spirit-Killer")
+    .Tags.addUnique("default", "spell.Spirit-Killer.activate-Spirit-Killer.drain-ghost")
 ;
 
 export const SPELLS = {

@@ -25,11 +25,11 @@ CREATURES.SPIRIT_BINDER
         .row.event_phase_mask.set(1)
     )
     .Scripts.onUpdateIc(3000, 8000, 3000, 8000, x=>x
-        .Action.setCast(SPELLS.frostlance.ID, 4, 5).Target.setVictim()
+        .Action.setCast(SPELLS.blizzard.ID, 4, 5).Target.setVictim()
         .row.event_phase_mask.set(1)
     )
     .Scripts.onUpdateIc(6000, 16000, 10000, 15000, x=>x
-        .Action.setCast(SPELLS.blizzard.ID, 4, 5).Target.setVictim()
+        .Action.setCast(SPELLS.frostlance.ID, 4, 5).Target.setVictim()
         .row.event_phase_mask.set(1)
     )
     .Scripts.onUpdateIc(6000, 16000, 15000, 20000, x=>x
@@ -68,7 +68,6 @@ CREATURES.SPIRIT_BINDER
 
         for ( const addsSpawnPosition of addsSpawnPositions ) {
             timedActionList.addAction(0, x=>x.Action.setSummonCreature(CREATURES.ENRAGED_SPIRIT.ID, "TIME_OR_DEATH", 100000, 0).Target.setPosition(addsSpawnPosition))
-            timedActionList.addAction(0, x=>x.Action.setSummonCreature(CREATURES.DEFEATED_SPIRIT.ID, "TIME_OR_DEATH", 100000, 0).Target.setPosition(addsSpawnPosition))
         };
 
         script.Action.setCallTimedActionlist(timedActionList.ID, 1, 1).Target.setSelf();

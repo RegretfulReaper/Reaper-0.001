@@ -81,6 +81,7 @@ creature|default:Devouring-Spirit-8|220011|220011|
 creature|default:Devouring-Spirit-9|220012|220012|
 creature|default:Lucious Falconcrest Boss-0|220000|220000|
 creature|default:Lucious Unknown-0|220020|220020|
+creature|default:creature.spirit-binder-0|220022|220022|
 creature|default:spawn-reaper-goldshire-trainer-0|220001|220001|
 creature|default:spawn-reaper-northshire-trainer-0|220002|220002|
 creature|default:spirit-binder-0|220021|220021|

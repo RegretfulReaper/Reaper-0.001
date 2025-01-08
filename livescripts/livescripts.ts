@@ -20,7 +20,7 @@ export function Main(events: TSEvents) {
 
 
 
-    events.Creature.OnJustAppeared(TAG("default", "creature.auto-set-position-z"), (creature) => {
+/*      events.Creature.OnJustAppeared(TAG("default", "creature.spirit-binder.auto-set-position-z"), (creature) => {
 
         // Force creatures always appear at ground level.
 
@@ -33,11 +33,11 @@ export function Main(events: TSEvents) {
 
         creature.NearTeleport(x, y, z, o);
         
-    });
+    }); */
 
 
 
-    events.Creature.OnJustAppeared(TAG("default", "enraged-spirit"), (creature) => {
+    events.Creature.OnJustAppeared(TAG("default", "creature.enraged-spirit"), (creature) => {
 
         // Apply random aura to adds.
 
@@ -49,7 +49,7 @@ export function Main(events: TSEvents) {
 
 
 
-    events.Creature.OnDeathEarly(TAG("default", "defeated-spirit"), (dying, killer) => {
+    events.Creature.OnDeathEarly(TAG("default", "creature.defeated-spirit"), (dying, killer) => {
 
         // Transfer buffs from adds to ghosts.
         
@@ -57,7 +57,7 @@ export function Main(events: TSEvents) {
 
         const auras = dying.GetAuraApplications();
 
-        const ghost = dying.GetNearestCreature(5, UTAG("default", "defeated-spirit"));
+        const ghost = dying.GetNearestCreature(5, UTAG("default", "creature.defeated-spirit"));
         if ( !ghost ) return;
 
         auras.forEach((aura) => {
@@ -80,7 +80,7 @@ export function Main(events: TSEvents) {
 
         dying.SetGUIDNumber("parent-guid", ghost.GetGUID());
 
-        const ghost_killer = ghost.GetMap().SpawnCreature(UTAG("default", "Spirit-Killer"), ghost.GetPosition().x, ghost.GetPosition().y, ghost.GetPosition().z, ghost.GetPosition().o, 0, 1);
+        const ghost_killer = ghost.GetMap().SpawnCreature(UTAG("default", "creature.Spirit-Killer"), ghost.GetPosition().x, ghost.GetPosition().y, ghost.GetPosition().z, ghost.GetPosition().o, 0, 1);
         if ( !ghost_killer ) return;
 
         ghost_killer.SetGUIDNumber("parent-guid", ghost.GetGUID());
@@ -89,7 +89,7 @@ export function Main(events: TSEvents) {
 
 
 
-    events.Creature.OnGossipHello(UTAG("default", "Spirit-Killer"), (creature, player, cancel) => {
+/*     events.Creature.OnGossipHello(UTAG("default", "creature.Spirit-Killer"), (creature, player, cancel) => {
 
         // Trigger a spell when ghost killer creature is interacted with.
 
@@ -121,7 +121,7 @@ export function Main(events: TSEvents) {
 
         target.DespawnOrUnsummon(6000);
 
-    });
+    }); */
 
 
 
